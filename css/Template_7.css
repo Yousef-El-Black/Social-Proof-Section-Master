@@ -1,0 +1,265 @@
+/* ### Primary
+
+Very Dark Magenta: hsl(300, 43%, 22%)
+Soft Pink: hsl(333, 80%, 67%)
+
+### Neutral
+
+Dark Grayish Magenta: hsl(303, 10%, 53%)
+Light Grayish Magenta: hsl(300, 24%, 96%)
+White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Spartan](https://fonts.google.com/specimen/Spartan)
+- Weights: 400, 500, 700 */
+
+/* Start Variables */
+
+:root {
+    --font-family:  'Spartan', sans-serif;
+    --card-color: hsl(300, 43%, 22%);
+    --word-color: hsl(333, 80%, 67%);
+    --paragraph-color: hsl(303, 10%, 53%);
+    --background-color: hsl(300, 24%, 96%);
+}
+
+/* End Variables */
+
+/* Start Global Rules */
+
+.container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width:767px) {
+    .container {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: var(--font-family);
+}
+
+/* End Global Rules */
+
+/* Start Components */
+
+/* End Components */
+
+/* Start Project */
+
+body {
+    background-color: white;
+    background-image: url(../Images/bg-pattern-top-mobile.svg);
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+@media (max-width:767px) {
+    .top {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.paragraph {
+    display: inline-block;
+    width: 42%;
+}
+
+@media (max-width:767px) {
+    .paragraph {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.paragraph h1 {
+    font-size: 42px;
+    color: var(--card-color);
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+@media (max-width:767px) {
+    .paragraph h1 {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 34px;
+        text-align: center;
+    }
+}
+
+.paragraph p {
+    color: var(--paragraph-color);
+    font-weight: 500;
+}
+
+@media (max-width:767px) {
+    .paragraph p {
+        text-align: center;
+    }
+}
+
+.rating {
+    margin-top: 0;
+}
+
+.rate {
+    border-radius: 5px;
+    background-color: var(--background-color);
+    padding: 0 25px 0 25px;
+    margin-bottom: 35px;
+}
+
+@media (max-width:767px) {
+    .rate {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}
+
+.rate p {
+    display: inline-block;
+    margin-left: 10px;
+    padding-right: 0;
+    color: var(--card-color);
+    font-weight: 700;
+}
+
+.rate:first-of-type {
+    transform: translateX(-50%);
+}
+
+@media (max-width:767px) {
+    .rate:first-of-type {
+        transform: translateX(0);
+    }
+}
+
+.rate:nth-of-type(2) {
+    transform: translateX(-25%);
+}
+
+@media (max-width:767px) {
+    .rate:nth-of-type(2) {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width:767px) {
+    .rate img {
+        margin-top: 10px;
+    }
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 45px;
+}
+
+@media (max-width:767px) {
+    .cards {
+        flex-direction: column;
+    }
+}
+
+.card {
+    width: 30%;
+    background-color: var(--card-color);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+@media (max-width:767px) {
+    .card {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.head {
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+}
+
+@media (max-width:767px) {
+    .head {
+        margin-left: 0;
+    }
+}
+
+.card .image {
+    margin-top: 10px;
+    transform: translateY(-5px);
+}
+
+@media (max-width:767px) {
+    .head {
+        margin-left: 0;
+    }
+}
+
+.card .image,
+.card .image img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.card .div p {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.card .div p:last-of-type {
+    margin-top: 5px;
+    color: var(--word-color);
+}
+
+.card > p {
+    font-size: 12px;
+    color: var(--background-color);
+    line-height: 1.6;
+}
+
+.card:nth-of-type(2) {
+    transform: translateY(10%);
+}
+
+.card:last-child {
+    transform: translateY(20%);
+}
+
+/* End Project */
